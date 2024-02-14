@@ -44,7 +44,7 @@ void SearchLibrary::startSearchingFile(const std::string& current_path,const std
         thread.join();
     }
 
-    if(SearchLibrary::searchFile(current_path, targetFile, found) == false)
+    if(!found)
     {
         std::cout << "Can't find file with this name";
     }
